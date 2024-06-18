@@ -1,0 +1,21 @@
+{
+  "name": "ecommerce-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/luke-weller/ecommerce-project.git",
+  "author": "luke-weller <wellerluke@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "private": true,
+  "workspaces": [
+    "infrastructure/*",
+    "frontend/*",
+    "backend/*"
+  ]
+}
