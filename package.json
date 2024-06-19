@@ -14,8 +14,8 @@
   },
   "private": true,
   "workspaces": [
-    "infrastructure/*",
-    "frontend/*",
-    "backend/*"
+    "infrastructure",
+    "frontend",
+    "backend"
   ]
 }
