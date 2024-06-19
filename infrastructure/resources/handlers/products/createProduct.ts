@@ -1,11 +1,11 @@
 import { DynamoDB } from "@aws-sdk/client-dynamodb";
 import { PutCommand } from "@aws-sdk/lib-dynamodb";
 import { randomUUID } from "crypto";
-import { IPost } from "../../../types";
+import { Product } from "../../../types";
 
 const dynamodb = new DynamoDB({});
 
-export async function create(body: string | null) {
+export async function createProduct(body: string | null) {
   const uuid = randomUUID();
 
   // If no body, return an error
@@ -17,7 +17,7 @@ export async function create(body: string | null) {
   }
 
   // Parse the body
-  const bodyParsed = JSON.parse(body) as IPost;
+  const bodyParsed = JSON.parse(body) as Product;
 
   // Creat the post
   await dynamodb.send(

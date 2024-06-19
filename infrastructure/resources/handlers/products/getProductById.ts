@@ -3,7 +3,7 @@ import { GetCommand } from "@aws-sdk/lib-dynamodb";
 
 const dynamodb = new DynamoDB({});
 
-export async function getOne({ id }: { id: string }) {
+export async function getProductById({ id }: { id: string }) {
   // Get the post from DynamoDB
   const result = await dynamodb.send(
     new GetCommand({

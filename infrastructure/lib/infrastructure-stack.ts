@@ -50,16 +50,8 @@ export class InfrastructureStack extends Stack {
     usagePlan.addApiKey(apiKey);
 
     // create the lambda functions
-    const postsLambda = new NodejsFunction(this, "PostsLambda", {
-      entry: "resources/endpoints/posts.ts",
-      handler: "handler",
-      environment: {
-        TABLE_NAME: dbTable.tableName,
-      },
-    });
-
-    const postLambda = new NodejsFunction(this, "PostLambda", {
-      entry: "resources/endpoints/post.ts",
+    const productsLambda = new NodejsFunction(this, "ProductsLambda", {
+      entry: "resources/endpoints/products.ts",
       handler: "handler",
       environment: {
         TABLE_NAME: dbTable.tableName,
@@ -67,28 +59,27 @@ export class InfrastructureStack extends Stack {
     });
 
     // Grant read and write access to the `postsLambda` and `postLambda` functions to the `dbTable`
-    dbTable.grantReadWriteData(postsLambda);
-    dbTable.grantReadWriteData(postLambda);
+    dbTable.grantReadWriteData(productsLambda);
 
     // define the endpoints
-    const posts = api.root.addResource("posts");
-    const post = posts.addResource("{id}");
+    const products = api.root.addResource("products");
+    const product = products.addResource("{id}");
 
-    const postsIntegration = new LambdaIntegration(postsLambda);
-    const postIntegration = new LambdaIntegration(postLambda);
+    const productsIntegration = new LambdaIntegration(productsLambda);
 
     // define the methods on the defined endpoints
-    posts.addMethod("GET", postsIntegration, {
-      apiKeyRequired: true,
-    });
-    posts.addMethod("POST", postsIntegration, {
+    products.addMethod("GET", productsIntegration, {
       apiKeyRequired: true,
     });
 
-    post.addMethod("GET", postIntegration, {
+    products.addMethod("POST", productsIntegration, {
       apiKeyRequired: true,
     });
-    post.addMethod("DELETE", postIntegration, {
+
+    product.addMethod("GET", productsIntegration, {
+      apiKeyRequired: true,
+    });
+    product.addMethod("DELETE", productsIntegration, {
       apiKeyRequired: true,
     });
 

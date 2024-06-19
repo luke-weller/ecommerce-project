@@ -1,8 +1,8 @@
 // ./resources/endpoints/post.ts
 
 import { APIGatewayProxyEvent } from "aws-lambda";
-import { getOne } from "../handlers/posts/get-one";
-import { deletePost } from "../handlers/posts/delete";
+import { getProductById } from "../handlers/products/getProductById";
+import { deleteProduct } from "../handlers/products/deleteProduct";
 
 export const handler = async (event: APIGatewayProxyEvent) => {
   const id = event.pathParameters?.id;
@@ -18,9 +18,9 @@ export const handler = async (event: APIGatewayProxyEvent) => {
     // Handle different HTTP methods
     switch (event.httpMethod) {
       case "GET":
-        return await getOne({ id });
+        return await getProductById({ id });
       case "DELETE":
-        return await deletePost({ id });
+        return await deleteProduct({ id });
       default:
         return {
           statusCode: 400,

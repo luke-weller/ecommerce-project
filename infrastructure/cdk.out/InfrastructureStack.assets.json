@@ -1,33 +1,20 @@
 {
   "version": "36.0.0",
   "files": {
-    "f729fc14fea32547c34d42367495ade9deaeb7e49603eafe572eb2d3141b84d7": {
+    "2fb7689259778cb76ff010f13f0a15b1c4378173f60594e39f78b7a2aae81418": {
       "source": {
-        "path": "/Users/luke-weller/Documents/GitHub/ecommerce-project/infrastructure",
+        "path": "asset.2fb7689259778cb76ff010f13f0a15b1c4378173f60594e39f78b7a2aae81418",
         "packaging": "zip"
       },
       "destinations": {
         "current_account-current_region": {
           "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
-          "objectKey": "f729fc14fea32547c34d42367495ade9deaeb7e49603eafe572eb2d3141b84d7.zip",
+          "objectKey": "2fb7689259778cb76ff010f13f0a15b1c4378173f60594e39f78b7a2aae81418.zip",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
         }
       }
     },
-    "7cbaa65317bf90e415f879c768db9e43f64519c2ef0f51686f1887917572b7dc": {
-      "source": {
-        "path": "/Users/luke-weller/Documents/GitHub/ecommerce-project/infrastructure",
-        "packaging": "zip"
-      },
-      "destinations": {
-        "current_account-current_region": {
-          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
-          "objectKey": "7cbaa65317bf90e415f879c768db9e43f64519c2ef0f51686f1887917572b7dc.zip",
-          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
-        }
-      }
-    },
-    "0ef563fa4633148234c6db0d437423b9f22ce3cf96e138dd44b609c846b06734": {
+    "c75dc2c7192babc11eaea863c093134eb1bcfd6a2bca110c585f6d9411db509f": {
       "source": {
         "path": "InfrastructureStack.template.json",
         "packaging": "file"
@@ -35,7 +22,7 @@
       "destinations": {
         "current_account-current_region": {
           "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
-          "objectKey": "0ef563fa4633148234c6db0d437423b9f22ce3cf96e138dd44b609c846b06734.json",
+          "objectKey": "c75dc2c7192babc11eaea863c093134eb1bcfd6a2bca110c585f6d9411db509f.json",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
         }
       }

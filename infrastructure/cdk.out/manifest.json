@@ -18,7 +18,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/0ef563fa4633148234c6db0d437423b9f22ce3cf96e138dd44b609c846b06734.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c75dc2c7192babc11eaea863c093134eb1bcfd6a2bca110c585f6d9411db509f.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -49,7 +49,7 @@
         "/InfrastructureStack/RestAPI/Deployment/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RestAPIDeploymentD35A5380fc1111535fdd73183f083e85eaf1fdb2"
+            "data": "RestAPIDeploymentD35A5380053fd2b80ba622d4ab03eccb88c5cab4"
           }
         ],
         "/InfrastructureStack/RestAPI/DeploymentStage.prod/Resource": [
@@ -70,100 +70,100 @@
             "data": "RestAPIOPTIONS3271A002"
           }
         ],
-        "/InfrastructureStack/RestAPI/Default/posts/Resource": [
+        "/InfrastructureStack/RestAPI/Default/products/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RestAPIposts4CB109FB"
+            "data": "RestAPIproductsCA169927"
           }
         ],
-        "/InfrastructureStack/RestAPI/Default/posts/OPTIONS/Resource": [
+        "/InfrastructureStack/RestAPI/Default/products/OPTIONS/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RestAPIpostsOPTIONS67FB1E0E"
+            "data": "RestAPIproductsOPTIONS4963E8A1"
           }
         ],
-        "/InfrastructureStack/RestAPI/Default/posts/{id}/Resource": [
+        "/InfrastructureStack/RestAPI/Default/products/{id}/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RestAPIpostsid76FD763E"
+            "data": "RestAPIproductsidB6CDE329"
           }
         ],
-        "/InfrastructureStack/RestAPI/Default/posts/{id}/OPTIONS/Resource": [
+        "/InfrastructureStack/RestAPI/Default/products/{id}/OPTIONS/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RestAPIpostsidOPTIONSBE1D451A"
+            "data": "RestAPIproductsidOPTIONSCA9528E7"
           }
         ],
-        "/InfrastructureStack/RestAPI/Default/posts/{id}/GET/ApiPermission.InfrastructureStackRestAPIC6BB4EEA.GET..posts.{id}": [
+        "/InfrastructureStack/RestAPI/Default/products/{id}/GET/ApiPermission.InfrastructureStackRestAPIC6BB4EEA.GET..products.{id}": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RestAPIpostsidGETApiPermissionInfrastructureStackRestAPIC6BB4EEAGETpostsid9878FE24"
+            "data": "RestAPIproductsidGETApiPermissionInfrastructureStackRestAPIC6BB4EEAGETproductsid6665BC63"
           }
         ],
-        "/InfrastructureStack/RestAPI/Default/posts/{id}/GET/ApiPermission.Test.InfrastructureStackRestAPIC6BB4EEA.GET..posts.{id}": [
+        "/InfrastructureStack/RestAPI/Default/products/{id}/GET/ApiPermission.Test.InfrastructureStackRestAPIC6BB4EEA.GET..products.{id}": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RestAPIpostsidGETApiPermissionTestInfrastructureStackRestAPIC6BB4EEAGETpostsid8CBC2766"
+            "data": "RestAPIproductsidGETApiPermissionTestInfrastructureStackRestAPIC6BB4EEAGETproductsidBE090DF4"
           }
         ],
-        "/InfrastructureStack/RestAPI/Default/posts/{id}/GET/Resource": [
+        "/InfrastructureStack/RestAPI/Default/products/{id}/GET/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RestAPIpostsidGET88D2B568"
+            "data": "RestAPIproductsidGET7365D521"
           }
         ],
-        "/InfrastructureStack/RestAPI/Default/posts/{id}/DELETE/ApiPermission.InfrastructureStackRestAPIC6BB4EEA.DELETE..posts.{id}": [
+        "/InfrastructureStack/RestAPI/Default/products/{id}/DELETE/ApiPermission.InfrastructureStackRestAPIC6BB4EEA.DELETE..products.{id}": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RestAPIpostsidDELETEApiPermissionInfrastructureStackRestAPIC6BB4EEADELETEpostsidEDA90012"
+            "data": "RestAPIproductsidDELETEApiPermissionInfrastructureStackRestAPIC6BB4EEADELETEproductsidE343F94F"
           }
         ],
-        "/InfrastructureStack/RestAPI/Default/posts/{id}/DELETE/ApiPermission.Test.InfrastructureStackRestAPIC6BB4EEA.DELETE..posts.{id}": [
+        "/InfrastructureStack/RestAPI/Default/products/{id}/DELETE/ApiPermission.Test.InfrastructureStackRestAPIC6BB4EEA.DELETE..products.{id}": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RestAPIpostsidDELETEApiPermissionTestInfrastructureStackRestAPIC6BB4EEADELETEpostsidCC7A94ED"
+            "data": "RestAPIproductsidDELETEApiPermissionTestInfrastructureStackRestAPIC6BB4EEADELETEproductsid733117E6"
           }
         ],
-        "/InfrastructureStack/RestAPI/Default/posts/{id}/DELETE/Resource": [
+        "/InfrastructureStack/RestAPI/Default/products/{id}/DELETE/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RestAPIpostsidDELETEEB791267"
+            "data": "RestAPIproductsidDELETE5198BC1C"
           }
         ],
-        "/InfrastructureStack/RestAPI/Default/posts/GET/ApiPermission.InfrastructureStackRestAPIC6BB4EEA.GET..posts": [
+        "/InfrastructureStack/RestAPI/Default/products/GET/ApiPermission.InfrastructureStackRestAPIC6BB4EEA.GET..products": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RestAPIpostsGETApiPermissionInfrastructureStackRestAPIC6BB4EEAGETposts190CC637"
+            "data": "RestAPIproductsGETApiPermissionInfrastructureStackRestAPIC6BB4EEAGETproducts17DC1C2E"
           }
         ],
-        "/InfrastructureStack/RestAPI/Default/posts/GET/ApiPermission.Test.InfrastructureStackRestAPIC6BB4EEA.GET..posts": [
+        "/InfrastructureStack/RestAPI/Default/products/GET/ApiPermission.Test.InfrastructureStackRestAPIC6BB4EEA.GET..products": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RestAPIpostsGETApiPermissionTestInfrastructureStackRestAPIC6BB4EEAGETpostsF0DD7A88"
+            "data": "RestAPIproductsGETApiPermissionTestInfrastructureStackRestAPIC6BB4EEAGETproductsF4B19463"
           }
         ],
-        "/InfrastructureStack/RestAPI/Default/posts/GET/Resource": [
+        "/InfrastructureStack/RestAPI/Default/products/GET/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RestAPIpostsGET40CAAA74"
+            "data": "RestAPIproductsGETEBA6E389"
           }
         ],
-        "/InfrastructureStack/RestAPI/Default/posts/POST/ApiPermission.InfrastructureStackRestAPIC6BB4EEA.POST..posts": [
+        "/InfrastructureStack/RestAPI/Default/products/POST/ApiPermission.InfrastructureStackRestAPIC6BB4EEA.POST..products": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RestAPIpostsPOSTApiPermissionInfrastructureStackRestAPIC6BB4EEAPOSTposts2C1E427D"
+            "data": "RestAPIproductsPOSTApiPermissionInfrastructureStackRestAPIC6BB4EEAPOSTproducts95AA7A4D"
           }
         ],
-        "/InfrastructureStack/RestAPI/Default/posts/POST/ApiPermission.Test.InfrastructureStackRestAPIC6BB4EEA.POST..posts": [
+        "/InfrastructureStack/RestAPI/Default/products/POST/ApiPermission.Test.InfrastructureStackRestAPIC6BB4EEA.POST..products": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RestAPIpostsPOSTApiPermissionTestInfrastructureStackRestAPIC6BB4EEAPOSTposts6168DF57"
+            "data": "RestAPIproductsPOSTApiPermissionTestInfrastructureStackRestAPIC6BB4EEAPOSTproducts63B1E17A"
           }
         ],
-        "/InfrastructureStack/RestAPI/Default/posts/POST/Resource": [
+        "/InfrastructureStack/RestAPI/Default/products/POST/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RestAPIpostsPOST92153FA9"
+            "data": "RestAPIproductsPOSTFF869E30"
           }
         ],
         "/InfrastructureStack/ApiKey/Resource": [
@@ -184,40 +184,22 @@
             "data": "UsagePlanUsagePlanKeyResourceInfrastructureStackApiKey552E46044967FD90"
           }
         ],
-        "/InfrastructureStack/PostsLambda/ServiceRole/Resource": [
+        "/InfrastructureStack/ProductsLambda/ServiceRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PostsLambdaServiceRoleF94306D3"
+            "data": "ProductsLambdaServiceRole760C79AE"
           }
         ],
-        "/InfrastructureStack/PostsLambda/ServiceRole/DefaultPolicy/Resource": [
+        "/InfrastructureStack/ProductsLambda/ServiceRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PostsLambdaServiceRoleDefaultPolicy75DD134B"
+            "data": "ProductsLambdaServiceRoleDefaultPolicy79DB2473"
           }
         ],
-        "/InfrastructureStack/PostsLambda/Resource": [
+        "/InfrastructureStack/ProductsLambda/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PostsLambda6B0B056B"
-          }
-        ],
-        "/InfrastructureStack/PostLambda/ServiceRole/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PostLambdaServiceRole1CD56985"
-          }
-        ],
-        "/InfrastructureStack/PostLambda/ServiceRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PostLambdaServiceRoleDefaultPolicy1E8FF5CA"
-          }
-        ],
-        "/InfrastructureStack/PostLambda/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PostLambda0EF1C7F9"
+            "data": "ProductsLambda1FF938FD"
           }
         ],
         "/InfrastructureStack/API Key ID": [

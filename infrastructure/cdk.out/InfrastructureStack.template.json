@@ -33,7 +33,7 @@
     "aws:cdk:path": "InfrastructureStack/RestAPI/Resource"
    }
   },
-  "RestAPIDeploymentD35A5380fc1111535fdd73183f083e85eaf1fdb2": {
+  "RestAPIDeploymentD35A5380053fd2b80ba622d4ab03eccb88c5cab4": {
    "Type": "AWS::ApiGateway::Deployment",
    "Properties": {
     "Description": "Automatically created by the RestApi construct",
@@ -43,14 +43,14 @@
    },
    "DependsOn": [
     "RestAPIOPTIONS3271A002",
-    "RestAPIpostsidDELETEEB791267",
-    "RestAPIpostsidGET88D2B568",
-    "RestAPIpostsidOPTIONSBE1D451A",
-    "RestAPIpostsid76FD763E",
-    "RestAPIpostsGET40CAAA74",
-    "RestAPIpostsOPTIONS67FB1E0E",
-    "RestAPIpostsPOST92153FA9",
-    "RestAPIposts4CB109FB"
+    "RestAPIproductsidDELETE5198BC1C",
+    "RestAPIproductsidGET7365D521",
+    "RestAPIproductsidOPTIONSCA9528E7",
+    "RestAPIproductsidB6CDE329",
+    "RestAPIproductsGETEBA6E389",
+    "RestAPIproductsOPTIONS4963E8A1",
+    "RestAPIproductsPOSTFF869E30",
+    "RestAPIproductsCA169927"
    ],
    "Metadata": {
     "aws:cdk:path": "InfrastructureStack/RestAPI/Deployment/Resource"
@@ -60,7 +60,7 @@
    "Type": "AWS::ApiGateway::Stage",
    "Properties": {
     "DeploymentId": {
-     "Ref": "RestAPIDeploymentD35A5380fc1111535fdd73183f083e85eaf1fdb2"
+     "Ref": "RestAPIDeploymentD35A5380053fd2b80ba622d4ab03eccb88c5cab4"
     },
     "RestApiId": {
      "Ref": "RestAPI1CC12F26"
@@ -117,7 +117,7 @@
     "aws:cdk:path": "InfrastructureStack/RestAPI/Default/OPTIONS/Resource"
    }
   },
-  "RestAPIposts4CB109FB": {
+  "RestAPIproductsCA169927": {
    "Type": "AWS::ApiGateway::Resource",
    "Properties": {
     "ParentId": {
@@ -126,16 +126,16 @@
       "RootResourceId"
      ]
     },
-    "PathPart": "posts",
+    "PathPart": "products",
     "RestApiId": {
      "Ref": "RestAPI1CC12F26"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/posts/Resource"
+    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/products/Resource"
    }
   },
-  "RestAPIpostsOPTIONS67FB1E0E": {
+  "RestAPIproductsOPTIONS4963E8A1": {
    "Type": "AWS::ApiGateway::Method",
    "Properties": {
     "ApiKeyRequired": false,
@@ -168,21 +168,21 @@
      }
     ],
     "ResourceId": {
-     "Ref": "RestAPIposts4CB109FB"
+     "Ref": "RestAPIproductsCA169927"
     },
     "RestApiId": {
      "Ref": "RestAPI1CC12F26"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/posts/OPTIONS/Resource"
+    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/products/OPTIONS/Resource"
    }
   },
-  "RestAPIpostsid76FD763E": {
+  "RestAPIproductsidB6CDE329": {
    "Type": "AWS::ApiGateway::Resource",
    "Properties": {
     "ParentId": {
-     "Ref": "RestAPIposts4CB109FB"
+     "Ref": "RestAPIproductsCA169927"
     },
     "PathPart": "{id}",
     "RestApiId": {
@@ -190,10 +190,10 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/posts/{id}/Resource"
+    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/products/{id}/Resource"
    }
   },
-  "RestAPIpostsidOPTIONSBE1D451A": {
+  "RestAPIproductsidOPTIONSCA9528E7": {
    "Type": "AWS::ApiGateway::Method",
    "Properties": {
     "ApiKeyRequired": false,
@@ -226,23 +226,23 @@
      }
     ],
     "ResourceId": {
-     "Ref": "RestAPIpostsid76FD763E"
+     "Ref": "RestAPIproductsidB6CDE329"
     },
     "RestApiId": {
      "Ref": "RestAPI1CC12F26"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/posts/{id}/OPTIONS/Resource"
+    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/products/{id}/OPTIONS/Resource"
    }
   },
-  "RestAPIpostsidGETApiPermissionInfrastructureStackRestAPIC6BB4EEAGETpostsid9878FE24": {
+  "RestAPIproductsidGETApiPermissionInfrastructureStackRestAPIC6BB4EEAGETproductsid6665BC63": {
    "Type": "AWS::Lambda::Permission",
    "Properties": {
     "Action": "lambda:InvokeFunction",
     "FunctionName": {
      "Fn::GetAtt": [
-      "PostLambda0EF1C7F9",
+      "ProductsLambda1FF938FD",
       "Arn"
      ]
     },
@@ -271,22 +271,22 @@
        {
         "Ref": "RestAPIDeploymentStageprod21CF62B9"
        },
-       "/GET/posts/*"
+       "/GET/products/*"
       ]
      ]
     }
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/posts/{id}/GET/ApiPermission.InfrastructureStackRestAPIC6BB4EEA.GET..posts.{id}"
+    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/products/{id}/GET/ApiPermission.InfrastructureStackRestAPIC6BB4EEA.GET..products.{id}"
    }
   },
-  "RestAPIpostsidGETApiPermissionTestInfrastructureStackRestAPIC6BB4EEAGETpostsid8CBC2766": {
+  "RestAPIproductsidGETApiPermissionTestInfrastructureStackRestAPIC6BB4EEAGETproductsidBE090DF4": {
    "Type": "AWS::Lambda::Permission",
    "Properties": {
     "Action": "lambda:InvokeFunction",
     "FunctionName": {
      "Fn::GetAtt": [
-      "PostLambda0EF1C7F9",
+      "ProductsLambda1FF938FD",
       "Arn"
      ]
     },
@@ -311,16 +311,16 @@
        {
         "Ref": "RestAPI1CC12F26"
        },
-       "/test-invoke-stage/GET/posts/*"
+       "/test-invoke-stage/GET/products/*"
       ]
      ]
     }
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/posts/{id}/GET/ApiPermission.Test.InfrastructureStackRestAPIC6BB4EEA.GET..posts.{id}"
+    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/products/{id}/GET/ApiPermission.Test.InfrastructureStackRestAPIC6BB4EEA.GET..products.{id}"
    }
   },
-  "RestAPIpostsidGET88D2B568": {
+  "RestAPIproductsidGET7365D521": {
    "Type": "AWS::ApiGateway::Method",
    "Properties": {
     "ApiKeyRequired": true,
@@ -344,7 +344,7 @@
         ":lambda:path/2015-03-31/functions/",
         {
          "Fn::GetAtt": [
-          "PostLambda0EF1C7F9",
+          "ProductsLambda1FF938FD",
           "Arn"
          ]
         },
@@ -354,23 +354,23 @@
      }
     },
     "ResourceId": {
-     "Ref": "RestAPIpostsid76FD763E"
+     "Ref": "RestAPIproductsidB6CDE329"
     },
     "RestApiId": {
      "Ref": "RestAPI1CC12F26"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/posts/{id}/GET/Resource"
+    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/products/{id}/GET/Resource"
    }
   },
-  "RestAPIpostsidDELETEApiPermissionInfrastructureStackRestAPIC6BB4EEADELETEpostsidEDA90012": {
+  "RestAPIproductsidDELETEApiPermissionInfrastructureStackRestAPIC6BB4EEADELETEproductsidE343F94F": {
    "Type": "AWS::Lambda::Permission",
    "Properties": {
     "Action": "lambda:InvokeFunction",
     "FunctionName": {
      "Fn::GetAtt": [
-      "PostLambda0EF1C7F9",
+      "ProductsLambda1FF938FD",
       "Arn"
      ]
     },
@@ -399,22 +399,22 @@
        {
         "Ref": "RestAPIDeploymentStageprod21CF62B9"
        },
-       "/DELETE/posts/*"
+       "/DELETE/products/*"
       ]
      ]
     }
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/posts/{id}/DELETE/ApiPermission.InfrastructureStackRestAPIC6BB4EEA.DELETE..posts.{id}"
+    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/products/{id}/DELETE/ApiPermission.InfrastructureStackRestAPIC6BB4EEA.DELETE..products.{id}"
    }
   },
-  "RestAPIpostsidDELETEApiPermissionTestInfrastructureStackRestAPIC6BB4EEADELETEpostsidCC7A94ED": {
+  "RestAPIproductsidDELETEApiPermissionTestInfrastructureStackRestAPIC6BB4EEADELETEproductsid733117E6": {
    "Type": "AWS::Lambda::Permission",
    "Properties": {
     "Action": "lambda:InvokeFunction",
     "FunctionName": {
      "Fn::GetAtt": [
-      "PostLambda0EF1C7F9",
+      "ProductsLambda1FF938FD",
       "Arn"
      ]
     },
@@ -439,16 +439,16 @@
        {
         "Ref": "RestAPI1CC12F26"
        },
-       "/test-invoke-stage/DELETE/posts/*"
+       "/test-invoke-stage/DELETE/products/*"
       ]
      ]
     }
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/posts/{id}/DELETE/ApiPermission.Test.InfrastructureStackRestAPIC6BB4EEA.DELETE..posts.{id}"
+    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/products/{id}/DELETE/ApiPermission.Test.InfrastructureStackRestAPIC6BB4EEA.DELETE..products.{id}"
    }
   },
-  "RestAPIpostsidDELETEEB791267": {
+  "RestAPIproductsidDELETE5198BC1C": {
    "Type": "AWS::ApiGateway::Method",
    "Properties": {
     "ApiKeyRequired": true,
@@ -472,7 +472,7 @@
         ":lambda:path/2015-03-31/functions/",
         {
          "Fn::GetAtt": [
-          "PostLambda0EF1C7F9",
+          "ProductsLambda1FF938FD",
           "Arn"
          ]
         },
@@ -482,23 +482,23 @@
      }
     },
     "ResourceId": {
-     "Ref": "RestAPIpostsid76FD763E"
+     "Ref": "RestAPIproductsidB6CDE329"
     },
     "RestApiId": {
      "Ref": "RestAPI1CC12F26"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/posts/{id}/DELETE/Resource"
+    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/products/{id}/DELETE/Resource"
    }
   },
-  "RestAPIpostsGETApiPermissionInfrastructureStackRestAPIC6BB4EEAGETposts190CC637": {
+  "RestAPIproductsGETApiPermissionInfrastructureStackRestAPIC6BB4EEAGETproducts17DC1C2E": {
    "Type": "AWS::Lambda::Permission",
    "Properties": {
     "Action": "lambda:InvokeFunction",
     "FunctionName": {
      "Fn::GetAtt": [
-      "PostsLambda6B0B056B",
+      "ProductsLambda1FF938FD",
       "Arn"
      ]
     },
@@ -527,22 +527,22 @@
        {
         "Ref": "RestAPIDeploymentStageprod21CF62B9"
        },
-       "/GET/posts"
+       "/GET/products"
       ]
      ]
     }
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/posts/GET/ApiPermission.InfrastructureStackRestAPIC6BB4EEA.GET..posts"
+    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/products/GET/ApiPermission.InfrastructureStackRestAPIC6BB4EEA.GET..products"
    }
   },
-  "RestAPIpostsGETApiPermissionTestInfrastructureStackRestAPIC6BB4EEAGETpostsF0DD7A88": {
+  "RestAPIproductsGETApiPermissionTestInfrastructureStackRestAPIC6BB4EEAGETproductsF4B19463": {
    "Type": "AWS::Lambda::Permission",
    "Properties": {
     "Action": "lambda:InvokeFunction",
     "FunctionName": {
      "Fn::GetAtt": [
-      "PostsLambda6B0B056B",
+      "ProductsLambda1FF938FD",
       "Arn"
      ]
     },
@@ -567,16 +567,16 @@
        {
         "Ref": "RestAPI1CC12F26"
        },
-       "/test-invoke-stage/GET/posts"
+       "/test-invoke-stage/GET/products"
       ]
      ]
     }
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/posts/GET/ApiPermission.Test.InfrastructureStackRestAPIC6BB4EEA.GET..posts"
+    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/products/GET/ApiPermission.Test.InfrastructureStackRestAPIC6BB4EEA.GET..products"
    }
   },
-  "RestAPIpostsGET40CAAA74": {
+  "RestAPIproductsGETEBA6E389": {
    "Type": "AWS::ApiGateway::Method",
    "Properties": {
     "ApiKeyRequired": true,
@@ -600,7 +600,7 @@
         ":lambda:path/2015-03-31/functions/",
         {
          "Fn::GetAtt": [
-          "PostsLambda6B0B056B",
+          "ProductsLambda1FF938FD",
           "Arn"
          ]
         },
@@ -610,23 +610,23 @@
      }
     },
     "ResourceId": {
-     "Ref": "RestAPIposts4CB109FB"
+     "Ref": "RestAPIproductsCA169927"
     },
     "RestApiId": {
      "Ref": "RestAPI1CC12F26"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/posts/GET/Resource"
+    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/products/GET/Resource"
    }
   },
-  "RestAPIpostsPOSTApiPermissionInfrastructureStackRestAPIC6BB4EEAPOSTposts2C1E427D": {
+  "RestAPIproductsPOSTApiPermissionInfrastructureStackRestAPIC6BB4EEAPOSTproducts95AA7A4D": {
    "Type": "AWS::Lambda::Permission",
    "Properties": {
     "Action": "lambda:InvokeFunction",
     "FunctionName": {
      "Fn::GetAtt": [
-      "PostsLambda6B0B056B",
+      "ProductsLambda1FF938FD",
       "Arn"
      ]
     },
@@ -655,22 +655,22 @@
        {
         "Ref": "RestAPIDeploymentStageprod21CF62B9"
        },
-       "/POST/posts"
+       "/POST/products"
       ]
      ]
     }
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/posts/POST/ApiPermission.InfrastructureStackRestAPIC6BB4EEA.POST..posts"
+    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/products/POST/ApiPermission.InfrastructureStackRestAPIC6BB4EEA.POST..products"
    }
   },
-  "RestAPIpostsPOSTApiPermissionTestInfrastructureStackRestAPIC6BB4EEAPOSTposts6168DF57": {
+  "RestAPIproductsPOSTApiPermissionTestInfrastructureStackRestAPIC6BB4EEAPOSTproducts63B1E17A": {
    "Type": "AWS::Lambda::Permission",
    "Properties": {
     "Action": "lambda:InvokeFunction",
     "FunctionName": {
      "Fn::GetAtt": [
-      "PostsLambda6B0B056B",
+      "ProductsLambda1FF938FD",
       "Arn"
      ]
     },
@@ -695,16 +695,16 @@
        {
         "Ref": "RestAPI1CC12F26"
        },
-       "/test-invoke-stage/POST/posts"
+       "/test-invoke-stage/POST/products"
       ]
      ]
     }
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/posts/POST/ApiPermission.Test.InfrastructureStackRestAPIC6BB4EEA.POST..posts"
+    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/products/POST/ApiPermission.Test.InfrastructureStackRestAPIC6BB4EEA.POST..products"
    }
   },
-  "RestAPIpostsPOST92153FA9": {
+  "RestAPIproductsPOSTFF869E30": {
    "Type": "AWS::ApiGateway::Method",
    "Properties": {
     "ApiKeyRequired": true,
@@ -728,7 +728,7 @@
         ":lambda:path/2015-03-31/functions/",
         {
          "Fn::GetAtt": [
-          "PostsLambda6B0B056B",
+          "ProductsLambda1FF938FD",
           "Arn"
          ]
         },
@@ -738,14 +738,14 @@
      }
     },
     "ResourceId": {
-     "Ref": "RestAPIposts4CB109FB"
+     "Ref": "RestAPIproductsCA169927"
     },
     "RestApiId": {
      "Ref": "RestAPI1CC12F26"
     }
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/posts/POST/Resource"
+    "aws:cdk:path": "InfrastructureStack/RestAPI/Default/products/POST/Resource"
    }
   },
   "ApiKeyF9DDEE66": {
@@ -792,7 +792,7 @@
     "aws:cdk:path": "InfrastructureStack/UsagePlan/UsagePlanKeyResource:InfrastructureStackApiKey552E4604"
    }
   },
-  "PostsLambdaServiceRoleF94306D3": {
+  "ProductsLambdaServiceRole760C79AE": {
    "Type": "AWS::IAM::Role",
    "Properties": {
     "AssumeRolePolicyDocument": {
@@ -823,10 +823,10 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/PostsLambda/ServiceRole/Resource"
+    "aws:cdk:path": "InfrastructureStack/ProductsLambda/ServiceRole/Resource"
    }
   },
-  "PostsLambdaServiceRoleDefaultPolicy75DD134B": {
+  "ProductsLambdaServiceRoleDefaultPolicy79DB2473": {
    "Type": "AWS::IAM::Policy",
    "Properties": {
     "PolicyDocument": {
@@ -862,25 +862,25 @@
      ],
      "Version": "2012-10-17"
     },
-    "PolicyName": "PostsLambdaServiceRoleDefaultPolicy75DD134B",
+    "PolicyName": "ProductsLambdaServiceRoleDefaultPolicy79DB2473",
     "Roles": [
      {
-      "Ref": "PostsLambdaServiceRoleF94306D3"
+      "Ref": "ProductsLambdaServiceRole760C79AE"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/PostsLambda/ServiceRole/DefaultPolicy/Resource"
+    "aws:cdk:path": "InfrastructureStack/ProductsLambda/ServiceRole/DefaultPolicy/Resource"
    }
   },
-  "PostsLambda6B0B056B": {
+  "ProductsLambda1FF938FD": {
    "Type": "AWS::Lambda::Function",
    "Properties": {
     "Code": {
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "f729fc14fea32547c34d42367495ade9deaeb7e49603eafe572eb2d3141b84d7.zip"
+     "S3Key": "2fb7689259778cb76ff010f13f0a15b1c4378173f60594e39f78b7a2aae81418.zip"
     },
     "Environment": {
      "Variables": {
@@ -892,136 +892,19 @@
     "Handler": "index.handler",
     "Role": {
      "Fn::GetAtt": [
-      "PostsLambdaServiceRoleF94306D3",
+      "ProductsLambdaServiceRole760C79AE",
       "Arn"
      ]
     },
     "Runtime": "nodejs18.x"
    },
    "DependsOn": [
-    "PostsLambdaServiceRoleDefaultPolicy75DD134B",
-    "PostsLambdaServiceRoleF94306D3"
+    "ProductsLambdaServiceRoleDefaultPolicy79DB2473",
+    "ProductsLambdaServiceRole760C79AE"
    ],
    "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/PostsLambda/Resource",
-    "aws:asset:path": "/Users/luke-weller/Documents/GitHub/ecommerce-project/infrastructure",
-    "aws:asset:is-bundled": true,
-    "aws:asset:property": "Code"
-   }
-  },
-  "PostLambdaServiceRole1CD56985": {
-   "Type": "AWS::IAM::Role",
-   "Properties": {
-    "AssumeRolePolicyDocument": {
-     "Statement": [
-      {
-       "Action": "sts:AssumeRole",
-       "Effect": "Allow",
-       "Principal": {
-        "Service": "lambda.amazonaws.com"
-       }
-      }
-     ],
-     "Version": "2012-10-17"
-    },
-    "ManagedPolicyArns": [
-     {
-      "Fn::Join": [
-       "",
-       [
-        "arn:",
-        {
-         "Ref": "AWS::Partition"
-        },
-        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-       ]
-      ]
-     }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/PostLambda/ServiceRole/Resource"
-   }
-  },
-  "PostLambdaServiceRoleDefaultPolicy1E8FF5CA": {
-   "Type": "AWS::IAM::Policy",
-   "Properties": {
-    "PolicyDocument": {
-     "Statement": [
-      {
-       "Action": [
-        "dynamodb:BatchGetItem",
-        "dynamodb:BatchWriteItem",
-        "dynamodb:ConditionCheckItem",
-        "dynamodb:DeleteItem",
-        "dynamodb:DescribeTable",
-        "dynamodb:GetItem",
-        "dynamodb:GetRecords",
-        "dynamodb:GetShardIterator",
-        "dynamodb:PutItem",
-        "dynamodb:Query",
-        "dynamodb:Scan",
-        "dynamodb:UpdateItem"
-       ],
-       "Effect": "Allow",
-       "Resource": [
-        {
-         "Fn::GetAtt": [
-          "DbTableED196C5F",
-          "Arn"
-         ]
-        },
-        {
-         "Ref": "AWS::NoValue"
-        }
-       ]
-      }
-     ],
-     "Version": "2012-10-17"
-    },
-    "PolicyName": "PostLambdaServiceRoleDefaultPolicy1E8FF5CA",
-    "Roles": [
-     {
-      "Ref": "PostLambdaServiceRole1CD56985"
-     }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/PostLambda/ServiceRole/DefaultPolicy/Resource"
-   }
-  },
-  "PostLambda0EF1C7F9": {
-   "Type": "AWS::Lambda::Function",
-   "Properties": {
-    "Code": {
-     "S3Bucket": {
-      "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
-     },
-     "S3Key": "7cbaa65317bf90e415f879c768db9e43f64519c2ef0f51686f1887917572b7dc.zip"
-    },
-    "Environment": {
-     "Variables": {
-      "TABLE_NAME": {
-       "Ref": "DbTableED196C5F"
-      }
-     }
-    },
-    "Handler": "index.handler",
-    "Role": {
-     "Fn::GetAtt": [
-      "PostLambdaServiceRole1CD56985",
-      "Arn"
-     ]
-    },
-    "Runtime": "nodejs18.x"
-   },
-   "DependsOn": [
-    "PostLambdaServiceRoleDefaultPolicy1E8FF5CA",
-    "PostLambdaServiceRole1CD56985"
-   ],
-   "Metadata": {
-    "aws:cdk:path": "InfrastructureStack/PostLambda/Resource",
-    "aws:asset:path": "/Users/luke-weller/Documents/GitHub/ecommerce-project/infrastructure",
+    "aws:cdk:path": "InfrastructureStack/ProductsLambda/Resource",
+    "aws:asset:path": "asset.2fb7689259778cb76ff010f13f0a15b1c4378173f60594e39f78b7a2aae81418",
     "aws:asset:is-bundled": true,
     "aws:asset:property": "Code"
    }

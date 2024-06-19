@@ -1,17 +1,17 @@
 // ./resources/endpoints/posts.ts
 
 import { APIGatewayProxyEvent } from "aws-lambda";
-import { getAll } from "../handlers/posts/get-all";
-import { create } from "../handlers/posts/create";
+import { getAllProducts } from "../handlers/products/getAllProducts";
+import { createProduct } from "../handlers/products/createProduct";
 
 export const handler = async (event: APIGatewayProxyEvent) => {
   try {
     // Handle different HTTP methods
     switch (event.httpMethod) {
       case "GET":
-        return await getAll();
+        return await getAllProducts();
       case "POST":
-        return await create(event.body);
+        return await createProduct(event.body);
       default:
         return {
           statusCode: 400,
