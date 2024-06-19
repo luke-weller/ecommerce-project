@@ -880,7 +880,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "32ded190450af1e42a8929f7c5358cfa496e8dd2342bb3ccb41e2023230031cb.zip"
+     "S3Key": "f729fc14fea32547c34d42367495ade9deaeb7e49603eafe572eb2d3141b84d7.zip"
     },
     "Environment": {
      "Variables": {
@@ -904,7 +904,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "InfrastructureStack/PostsLambda/Resource",
-    "aws:asset:path": "asset.32ded190450af1e42a8929f7c5358cfa496e8dd2342bb3ccb41e2023230031cb",
+    "aws:asset:path": "/Users/luke-weller/Documents/GitHub/ecommerce-project/infrastructure",
     "aws:asset:is-bundled": true,
     "aws:asset:property": "Code"
    }
@@ -997,7 +997,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "6540dba0d1741386036072436243f00fa6335bbab0470d497de3f1b01faaa5a6.zip"
+     "S3Key": "7cbaa65317bf90e415f879c768db9e43f64519c2ef0f51686f1887917572b7dc.zip"
     },
     "Environment": {
      "Variables": {
@@ -1021,7 +1021,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "InfrastructureStack/PostLambda/Resource",
-    "aws:asset:path": "asset.6540dba0d1741386036072436243f00fa6335bbab0470d497de3f1b01faaa5a6",
+    "aws:asset:path": "/Users/luke-weller/Documents/GitHub/ecommerce-project/infrastructure",
     "aws:asset:is-bundled": true,
     "aws:asset:property": "Code"
    }

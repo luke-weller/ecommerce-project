@@ -1,33 +1,33 @@
 {
   "version": "36.0.0",
   "files": {
-    "32ded190450af1e42a8929f7c5358cfa496e8dd2342bb3ccb41e2023230031cb": {
+    "f729fc14fea32547c34d42367495ade9deaeb7e49603eafe572eb2d3141b84d7": {
       "source": {
-        "path": "asset.32ded190450af1e42a8929f7c5358cfa496e8dd2342bb3ccb41e2023230031cb",
+        "path": "/Users/luke-weller/Documents/GitHub/ecommerce-project/infrastructure",
         "packaging": "zip"
       },
       "destinations": {
         "current_account-current_region": {
           "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
-          "objectKey": "32ded190450af1e42a8929f7c5358cfa496e8dd2342bb3ccb41e2023230031cb.zip",
+          "objectKey": "f729fc14fea32547c34d42367495ade9deaeb7e49603eafe572eb2d3141b84d7.zip",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
         }
       }
     },
-    "6540dba0d1741386036072436243f00fa6335bbab0470d497de3f1b01faaa5a6": {
+    "7cbaa65317bf90e415f879c768db9e43f64519c2ef0f51686f1887917572b7dc": {
       "source": {
-        "path": "asset.6540dba0d1741386036072436243f00fa6335bbab0470d497de3f1b01faaa5a6",
+        "path": "/Users/luke-weller/Documents/GitHub/ecommerce-project/infrastructure",
         "packaging": "zip"
       },
       "destinations": {
         "current_account-current_region": {
           "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
-          "objectKey": "6540dba0d1741386036072436243f00fa6335bbab0470d497de3f1b01faaa5a6.zip",
+          "objectKey": "7cbaa65317bf90e415f879c768db9e43f64519c2ef0f51686f1887917572b7dc.zip",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
         }
       }
     },
-    "cc2234b9e65a39c5d2e5f97b93f891e2455429ccd52c31f938cdaa5bef513215": {
+    "0ef563fa4633148234c6db0d437423b9f22ce3cf96e138dd44b609c846b06734": {
       "source": {
         "path": "InfrastructureStack.template.json",
         "packaging": "file"
@@ -35,7 +35,7 @@
       "destinations": {
         "current_account-current_region": {
           "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
-          "objectKey": "cc2234b9e65a39c5d2e5f97b93f891e2455429ccd52c31f938cdaa5bef513215.json",
+          "objectKey": "0ef563fa4633148234c6db0d437423b9f22ce3cf96e138dd44b609c846b06734.json",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
         }
       }
