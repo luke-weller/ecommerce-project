@@ -6,6 +6,7 @@ A basic e-commerce project showcasing my work as an example for employers. This 
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Development Workflow](#development-workflow)
 
 ## Prerequisites
 
@@ -88,3 +89,15 @@ To use the API of the e-commerce project, follow these steps:
    ```
 
    Replace `YOUR_API_KEY` with the actual API key value generated during the infrastructure deployment.
+
+## Tear Down
+
+To tear down the infrastructure created for the e-commerce project, follow these steps:
+
+1. Open a terminal and navigate to the `infrastructure` direcotry and run:
+
+   ```
+   cdk destroy
+   ```
+
+   This command will remove all the AWS resources created by the CDK stack.
