@@ -4,9 +4,11 @@ A basic e-commerce project showcasing my work as an example for employers. This 
 
 ## Table of Contents
 
+- [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Development Workflow](#development-workflow)
+- [EcomCLI](#ecomcli)
+- [Tear Down](#tear-down)
 
 ## Prerequisites
 
@@ -21,13 +23,7 @@ Before setting up the e-commerce project, make sure you have the following prere
    git clone https://github.com/your-username/ecommerce-project.git
    ```
 
-## Installation
-
-### Setting up the project infrastructure
-
-To set up the e-commerce project locally and deploy resources to AWS, follow these steps:
-
-2. Configure AWS CLI:
+5. Configure AWS CLI:
 
    ```
    aws configure
@@ -35,7 +31,13 @@ To set up the e-commerce project locally and deploy resources to AWS, follow the
 
    Follow the prompts to enter your AWS Access Key ID, Secret Access Key, default region, and output format.
 
-3. Deploy the infrastructure:
+## Installation
+
+### Setting up the project infrastructure
+
+To set up the e-commerce project locally and deploy resources to AWS, follow these steps:
+
+1. Deploy the infrastructure:
 
    ```
    cd infrastructure
@@ -44,7 +46,7 @@ To set up the e-commerce project locally and deploy resources to AWS, follow the
 
    This command will deploy the necessary AWS resources for the e-commerce project.
 
-4. After running `cdk deploy`, the terminal output will display the following information:
+2. After running `cdk deploy`, the terminal output will display the following information:
 
 ```
 Outputs:
@@ -54,13 +56,13 @@ Stack ARN:
 arn:aws:cloudformation:us-east-2:637423186947:stack/InfrastructureStack/12146c30-2dba-11ef-9cd0-025716740bd1
 ```
 
-5. To retrieve the API key, replace `API_KEY_ID` in the command below with `InfrastructureStack.APIKeyID` output from your terminal:
+3. To retrieve the API key, replace `API_KEY_ID` in the command below with `InfrastructureStack.APIKeyID` output from your terminal:
 
 ```
 aws apigateway get-api-key --api-key API_KEY_ID --include-value
 ```
 
-6. You can use the generated API key from running this command as a header in your API calls. For example,
+4. You can use the generated API key from running this command as a header in your API calls. For example,
 
 ```
 curl -X GET \
@@ -90,11 +92,36 @@ To use the API of the e-commerce project, follow these steps:
 
    Replace `YOUR_API_KEY` with the actual API key value generated during the infrastructure deployment.
 
+### EcomCLI
+
+To aid in the development process, a CLI tool has been built for this project. To use it, follow these steps:
+
+1. Make sure you are in the root directory of the project.
+2. Run the following command to make the `ecomcli.sh` file executable:
+
+   ```
+   chmod +x ecomcli.sh
+   ```
+
+   Note: This command only needs to be run during the first setup.
+
+3. Run the following command to start the CLI:
+
+   ```
+   ./ecomcli.sh
+   ```
+
+   This will launch the EcomCLI and provide you with a set of available commands.
+
+   Example usage: `help`
+
+   The `help` command will display all the available commands and their descriptions. The EcomCLI is designed to streamline the development process, allowing you to deploy, test, and perform other common tasks more efficiently and with reduced errors.
+
 ## Tear Down
 
 To tear down the infrastructure created for the e-commerce project, follow these steps:
 
-1. Open a terminal and navigate to the `infrastructure` direcotry and run:
+1. Open a terminal and navigate to the `infrastructure` directory and run:
 
    ```
    cdk destroy
