@@ -7,16 +7,18 @@ task("build", (done) => {
     console.log(chalk.bold("Building the project with `yarn build`..."));
     if (error) {
       console.error(chalk.red(`Error: ${error.message}`));
+      done(error); // Stop execution and pass the error to the callback
       return;
     }
     if (stderr) {
       console.error(chalk.yellow(`stderr: ${stderr}`));
+      done(new Error(stderr));
       return;
     }
     console.log(chalk.green(stdout));
     console.log(chalk.bold.green("Build finished successfully!"));
+    done(); // Signal that the task is complete
   });
-  done();
 });
 
 task("deploy", (done) => {

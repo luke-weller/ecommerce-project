@@ -28,7 +28,7 @@ export class InfrastructureStack extends Stack {
       billingMode: BillingMode.PAY_PER_REQUEST,
     });
 
-    const usersTable = new Table(this, "OrdersTable", {
+    const usersTable = new Table(this, "UsersTable", {
       partitionKey: { name: "pk", type: AttributeType.STRING },
       removalPolicy: RemovalPolicy.DESTROY,
       billingMode: BillingMode.PAY_PER_REQUEST,
