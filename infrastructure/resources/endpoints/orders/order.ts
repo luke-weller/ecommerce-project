@@ -1,17 +1,24 @@
-// ./resources/endpoints/posts.ts
-
 import { APIGatewayProxyEvent } from "aws-lambda";
-import { getAllProducts } from "../handlers/products/getAllProducts";
-import { createProduct } from "../handlers/products/createProduct";
+import { getOrderById } from "../../handlers/orders/getOrderById";
+import { deleteOrder } from "../../handlers/orders/deleteOrder";
 
 export const handler = async (event: APIGatewayProxyEvent) => {
+  const id = event.pathParameters?.id;
+
+  if (!id) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ message: "Missing path parameter: id" }),
+    };
+  }
+
   try {
     // Handle different HTTP methods
     switch (event.httpMethod) {
       case "GET":
-        return await getAllProducts();
-      case "POST":
-        return await createProduct(event.body);
+        return await getOrderById({ id });
+      case "DELETE":
+        return await deleteOrder({ id });
       default:
         return {
           statusCode: 400,
