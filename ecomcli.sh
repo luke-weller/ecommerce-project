@@ -24,6 +24,7 @@ show_help() {
   echo "  build     Build the project"
   echo "  synth     synthesize the project"
   echo "  deploy    Build and deploy the project"
+  echo "  destroy   Destroy the project"
   echo "  help      Show this help message"
   echo "  clear     Clear the screen"
   echo "  exit      Exit the CLI"

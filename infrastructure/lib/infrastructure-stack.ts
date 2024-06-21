@@ -15,7 +15,7 @@ export class InfrastructureStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    // create the db table
+    // create the db tables
     const productsTable = new Table(this, "ProductsTable", {
       partitionKey: { name: "pk", type: AttributeType.STRING },
       removalPolicy: RemovalPolicy.DESTROY,
