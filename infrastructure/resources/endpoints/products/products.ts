@@ -1,5 +1,3 @@
-// ./resources/endpoints/posts.ts
-
 import { APIGatewayProxyEvent } from "aws-lambda";
 import { getAllProducts } from "../../handlers/products/getAllProducts";
 import { createProduct } from "../../handlers/products/createProduct";

@@ -5,7 +5,7 @@ import { User } from "../../../types";
 
 const dynamodb = new DynamoDB({});
 
-export async function createOrder(body: string | null) {
+export async function createUser(body: string | null) {
   const uuid = randomUUID();
 
   // If no body, return an error
@@ -19,7 +19,7 @@ export async function createOrder(body: string | null) {
   // Parse the body
   const bodyParsed = JSON.parse(body) as User;
 
-  // Create the post
+  // Creat the post
   await dynamodb.send(
     new PutCommand({
       TableName: process.env.TABLE_NAME,
