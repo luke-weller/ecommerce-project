@@ -17,12 +17,17 @@ destroy_project() {
     gulp destroy
 }
 
+test_project() {
+    gulp test
+}
+
 
 # Function to display help
 show_help() {
   echo "Available commands:"
   echo "  build     Build the project"
-  echo "  synth     synthesize the project"
+  echo "  test      Test the project"
+  echo "  synth     Synthesize the project"
   echo "  deploy    Build and deploy the project"
   echo "  destroy   Destroy the project"
   echo "  help      Show this help message"
@@ -57,6 +62,9 @@ while true; do
     case "$input" in
         build)
             build_project
+            ;;
+        test)
+            test_project
             ;;
         deploy)
             deploy_project

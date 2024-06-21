@@ -73,3 +73,19 @@ task("destroy", (done) => {
     done();
   });
 });
+
+task("test", (done) => {
+  console.log(chalk.bold("Running unit tests with `yarn test`..."));
+  const testProcess = spawn("yarn", ["test"], {
+    stdio: "inherit",
+    shell: true,
+  });
+  testProcess.on("close", (code) => {
+    if (code === 0) {
+      console.log(chalk.bold.green("Unit tests finished successfully!"));
+    } else {
+      console.error(chalk.red(`Unit tests process exited with code ${code}`));
+    }
+    done();
+  });
+});
