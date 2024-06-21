@@ -19,7 +19,7 @@ export async function createProduct(body: string | null) {
   // Parse the body
   const bodyParsed = JSON.parse(body) as Product;
 
-  // Creat the post
+  // Create the post
   await dynamodb.send(
     new PutCommand({
       TableName: process.env.TABLE_NAME,
