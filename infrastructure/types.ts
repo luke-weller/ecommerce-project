@@ -5,9 +5,7 @@ export interface Product {
   description: string;
   category: string;
   createdAt: Date;
-  createdBy: string;
   updatedAt: Date;
-  updatedBy: string;
 }
 
 export interface User {
@@ -16,9 +14,7 @@ export interface User {
   email: string;
   password: string;
   createdAt: Date;
-  createdBy: string;
   updatedAt: Date;
-  updatedBy: string;
 }
 
 export interface Order {
@@ -28,7 +24,5 @@ export interface Order {
   total: number;
   date: Date;
   createdAt: Date;
-  createdBy: string;
   updatedAt: Date;
-  updatedBy: string;
 }
