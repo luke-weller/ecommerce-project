@@ -1,6 +1,9 @@
 #!/bin/bash
 
-# Function to handle deployment
+install_project() {
+    gulp install
+}
+
 build_project() {
     gulp build
 }
@@ -25,6 +28,7 @@ test_project() {
 # Function to display help
 show_help() {
   echo "Available commands:"
+  echo "  install   Install the project"
   echo "  build     Build the project"
   echo "  test      Test the project"
   echo "  synth     Synthesize the project"
@@ -60,6 +64,9 @@ while true; do
     echo -n "EcomCLI> "
     read input
     case "$input" in
+        install)
+            install_project
+            ;;
         build)
             build_project
             ;;

@@ -2,6 +2,23 @@ import { task } from "gulp";
 import { exec, spawn } from "child_process";
 import chalk from "chalk";
 
+task("install", (done) => {
+  console.log(chalk.bold("Running `yarn install` in the root directory..."));
+  const installProcess = spawn("yarn", ["install"], {
+    stdio: "inherit",
+    shell: true,
+    cwd: process.cwd(),
+  });
+  installProcess.on("close", (code) => {
+    if (code === 0) {
+      console.log(chalk.bold.green("Installation finished successfully!"));
+    } else {
+      console.error(chalk.red(`Installation process exited with code ${code}`));
+    }
+    done();
+  });
+});
+
 task("build", (done) => {
   exec("yarn build", (error, stdout, stderr) => {
     console.log(chalk.bold("Building the project with `yarn build`..."));
